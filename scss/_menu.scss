@@ -5,7 +5,7 @@
     top: 35px;
     right: 35px;
     cursor: pointer;
-    @include easeOut;
+    @extend %easeOut; // Icon btn
     .btn-line {
         position: relative;
         width: 28px;
@@ -13,7 +13,7 @@
         margin: 0 0 5px 0;
         background-color: #fff;
         display: block;
-        @include easeOut;
+        @extend %easeOut;
         &::before,
         &::after {
             content: '';
@@ -22,7 +22,7 @@
             width: 100%;
             height: 100%;
             position: absolute;
-            transition: 0.5s ease-in-out;
+            @extend %easeOut;
         }
         &::before {
             top: -10px;
@@ -51,7 +51,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    opacity: 0.9;
+    opacity: $background-opacity;
     visibility: hidden;
     &.show {
         visibility: visible;
@@ -71,9 +71,9 @@
         margin: 0;
         padding: 0;
         background: darken($primary-color, 5);
-        list-style: none;
+        list-style: none; // -100 in y axis
         transform: translate3d(0, -100%, 0);
-        @include easeOut;
+        @extend %easeOut;
         &.show {
             // Slide in from top
             transform: translate3d(0, 0, 0);
@@ -81,7 +81,7 @@
     } // BRANDING SIDE
     &-branding {
         background: $primary-color;
-        @include easeOut;
+        @extend %easeOut;
         transform: translate3d(0, 100%, 0);
         &.show {
             // Slide in from bottom
@@ -97,7 +97,7 @@
     }
     .nav-item {
         transform: translate3d(600px, 0, 0);
-        @include easeOut;
+        @extend %easeOut;
         &.show {
             // Slide in from right
             transform: translate3d(0, 0, 0);
@@ -115,7 +115,7 @@
         font-weight: 300;
         color: #fff;
         text-decoration: none;
-        @include easeOut;
+        @extend %easeOut;
         &:hover {
             color: $secondary-color;
         }

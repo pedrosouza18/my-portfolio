@@ -1,26 +1,31 @@
+.menu-btn, .menu-btn .btn-line, .menu-btn .btn-line::before, .menu-btn .btn-line::after, .menu-nav, .menu-branding, .menu .nav-item, .menu .nav-link, main .icons a {
+  transition: all 0.5s ease-out; }
+
+body#bg-img {
+  background: linear-gradient(rgba(68, 68, 68, 0.9), rgba(68, 68, 68, 0.9)), url("../img/background.jpg");
+  background-attachment: fixed;
+  background-size: cover; }
+
 .menu-btn {
   position: absolute;
   z-index: 3;
   top: 35px;
   right: 35px;
-  cursor: pointer;
-  transition: all 0.5s ease-out; }
+  cursor: pointer; }
   .menu-btn .btn-line {
     position: relative;
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
     background-color: #fff;
-    display: block;
-    transition: all 0.5s ease-out; }
+    display: block; }
     .menu-btn .btn-line::before, .menu-btn .btn-line::after {
       content: '';
       background: #fff;
       display: block;
       width: 100%;
       height: 100%;
-      position: absolute;
-      transition: 0.5s ease-in-out; }
+      position: absolute; }
     .menu-btn .btn-line::before {
       top: -10px; }
     .menu-btn .btn-line::after {
@@ -56,13 +61,11 @@
     padding: 0;
     background: #373737;
     list-style: none;
-    transform: translate3d(0, -100%, 0);
-    transition: all 0.5s ease-out; }
+    transform: translate3d(0, -100%, 0); }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
     background: #444444;
-    transition: all 0.5s ease-out;
     transform: translate3d(0, 100%, 0); }
     .menu-branding.show {
       transform: translate3d(0, 0, 0); }
@@ -73,8 +76,7 @@
       border-radius: 50%;
       border: 3px solid #eece1a; }
   .menu .nav-item {
-    transform: translate3d(600px, 0, 0);
-    transition: all 0.5s ease-out; }
+    transform: translate3d(600px, 0, 0); }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
@@ -87,8 +89,7 @@
     padding: 1rem 0;
     font-weight: 300;
     color: #fff;
-    text-decoration: none;
-    transition: all 0.5s ease-out; }
+    text-decoration: none; }
     .menu .nav-link:hover {
       color: #eece1a; }
 
@@ -145,10 +146,6 @@ body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
-  body#bg-img {
-    background: linear-gradient(rgba(68, 68, 68, 0.9), rgba(68, 68, 68, 0.9)), url("../img/background.jpg");
-    background-attachment: fixed;
-    background-size: cover; }
 
 h1,
 h2,
@@ -184,8 +181,7 @@ main {
   main .icons {
     margin-top: 1rem; }
     main .icons a {
-      padding: 0.4rem;
-      transition: all 0.5s ease-out; }
+      padding: 0.4rem; }
       main .icons a:hover {
         color: #eece1a; }
   main#home {
