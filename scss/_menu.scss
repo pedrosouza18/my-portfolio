@@ -1,0 +1,47 @@
+// MENU BUTTON
+.menu-btn {
+    position: absolute;
+    z-index: 3;
+    top: 35px;
+    right: 35px;
+    cursor: pointer;
+    @include easeOut;
+    .btn-line {
+        position: relative;
+        width: 28px;
+        height: 3px;
+        margin: 0 0 5px 0;
+        background-color: #fff;
+        display: block;
+        @include easeOut;
+        &::before,
+        &::after {
+            content: '';
+            background: #fff;
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transition: 0.5s ease-in-out;
+        }
+        &::before {
+            top: -10px;
+        }
+        &::after {
+            bottom: -10px;
+        }
+    }
+    &.close {
+        .btn-line {
+            transform: rotate(45deg);
+            &::before {
+                top: 0;
+                transform: rotate(90deg);
+            }
+            &::after {
+                bottom: 0;
+                transform: rotate(90deg);
+            }
+        }
+    }
+}
